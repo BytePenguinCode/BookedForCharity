@@ -37,6 +37,7 @@ section.card-section {
     border-radius: 1rem;
     cursor: pointer;
 }
+
 /* ====== MENU LINK DEDENT TILE EFFECT ====== */
 nav ul li a {
     transition: background-color 0.3s ease, transform 0.3s ease;
@@ -87,16 +88,25 @@ header h1 {
     }
 }
 @keyframes float-slow {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
 }
 .animate-float-slow {
     animation: float-slow 6s ease-in-out infinite;
 }
 
 @keyframes spin-slow {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 .animate-spin-slow {
     animation: spin-slow 8s linear infinite;

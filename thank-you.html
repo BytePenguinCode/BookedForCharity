@@ -35,6 +35,22 @@
             };
         </script>
 
+        <style>
+            section.card-section {
+                background-color: white;
+                transition: background-color 0.3s ease, box-shadow 0.3s ease,
+                    transform 0.3s ease;
+                border-radius: 1rem;
+                cursor: pointer;
+            }
+            section.card-section:hover,
+            section.card-section:active {
+                background-color: #d2f3ef;
+                transform: scale(1.02);
+                box-shadow: 0 16px 24px rgba(0, 0, 0, 0.1);
+            }
+        </style>
+
         <link rel="stylesheet" href="styles.css" />
     </head>
 
@@ -190,98 +206,108 @@
             </section>
 
             <!-- Supporter Spotlights -->
-            <section class="space-y-6">
+            <section class="space-y-6 px-4">
                 <h2
                     class="text-2xl sm:text-3xl font-cooper text-cardDark mb-4 sm:mb-6 text-center"
                 >
                     Supporter Spotlights
                 </h2>
 
-                <div class="grid gap-6 md:grid-cols-2">
-                    <div
-                        class="card-section bg-white border border-pagePrimary/40 shadow-md rounded-lg p-6"
-                    >
-                        <blockquote
-                            class="text-base sm:text-lg italic font-medium text-gray-900"
+                <div class="flex flex-col space-y-6">
+                    <!-- Left Aligned -->
+                    <div class="flex flex-col md:flex-row md:justify-start">
+                        <div
+                            class="max-w-xl card-section bg-white border border-pagePrimary/40 shadow-md rounded-lg p-6"
                         >
-                            <svg
-                                class="w-6 h-6 text-cardDark mb-2"
-                                xmlns="http://www.w3.org/2000/svg"
-                                fill="currentColor"
-                                viewBox="0 0 18 14"
+                            <blockquote
+                                class="text-base sm:text-lg italic font-medium text-gray-900"
                             >
-                                <path
-                                    d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z"
-                                />
-                            </svg>
-                            <p>
-                                "We agree that it's so important to keep young
-                                people interested in reading. The work your org
-                                does is awesome, keep it up!"
-                            </p>
-                            <footer
-                                class="mt-2 text-sm font-bold text-cardDark"
-                            >
-                                — The Critical Page Collective
-                            </footer>
-                        </blockquote>
+                                <svg
+                                    class="w-6 h-6 text-cardDark mb-2"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="currentColor"
+                                    viewBox="0 0 18 14"
+                                >
+                                    <path
+                                        d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z"
+                                    />
+                                </svg>
+                                <p>
+                                    "We agree that it's so important to keep
+                                    young people interested in reading. The work
+                                    your org does is awesome, keep it up!"
+                                </p>
+                                <footer
+                                    class="mt-2 text-sm font-bold text-cardDark"
+                                >
+                                    — The Critical Page Collective
+                                </footer>
+                            </blockquote>
+                        </div>
                     </div>
 
-                    <div
-                        class="card-section bg-white border border-pagePrimary/40 shadow-md rounded-lg p-6"
-                    >
-                        <blockquote
-                            class="text-base sm:text-lg italic font-medium text-gray-900"
+                    <!-- Right Aligned -->
+                    <div class="flex flex-col md:flex-row md:justify-end">
+                        <div
+                            class="max-w-xl card-section bg-white border border-pagePrimary/40 shadow-md rounded-lg p-6"
                         >
-                            <svg
-                                class="w-6 h-6 text-cardDark mb-2"
-                                xmlns="http://www.w3.org/2000/svg"
-                                fill="currentColor"
-                                viewBox="0 0 18 14"
+                            <blockquote
+                                class="text-base sm:text-lg italic font-medium text-gray-900"
                             >
-                                <path
-                                    d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z"
-                                />
-                            </svg>
-                            <p>
-                                "We love how your organization is asserting
-                                itself building this fantastic endeavor!"
-                            </p>
-                            <footer
-                                class="mt-2 text-sm font-bold text-cardDark"
-                            >
-                                — Anonymous
-                            </footer>
-                        </blockquote>
+                                <svg
+                                    class="w-6 h-6 text-cardDark mb-2"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="currentColor"
+                                    viewBox="0 0 18 14"
+                                >
+                                    <path
+                                        d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z"
+                                    />
+                                </svg>
+                                <p>
+                                    "We love how your organization is asserting
+                                    itself building this fantastic endeavor!"
+                                </p>
+                                <footer
+                                    class="mt-2 text-sm font-bold text-cardDark"
+                                >
+                                    — Anonymous
+                                </footer>
+                            </blockquote>
+                        </div>
                     </div>
 
-                    <div
-                        class="card-section bg-white border border-pagePrimary/40 shadow-md rounded-lg p-6"
-                    >
-                        <blockquote
-                            class="text-base sm:text-lg italic font-medium text-gray-900"
+                    <!-- Left Aligned Again -->
+                    <div class="flex flex-col md:flex-row md:justify-start">
+                        <div
+                            class="max-w-xl card-section bg-white border border-pagePrimary/40 shadow-md rounded-lg p-6"
                         >
-                            <svg
-                                class="w-6 h-6 text-cardDark mb-2"
-                                xmlns="http://www.w3.org/2000/svg"
-                                fill="currentColor"
-                                viewBox="0 0 18 14"
+                            <blockquote
+                                class="text-base sm:text-lg italic font-medium text-gray-900"
                             >
-                                <path
-                                    d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z"
-                                />
-                            </svg>
-                            <p>
-                                "It's truly inspiring to see the impact Booked
-                                for Charity is making! I appreciate all that you
-                                are doing to make a difference."
-                            </p>
-                            <footer
-                                class="mt-2 text-sm font-bold text-cardDark"
-                            >
-                                — Transcendent Journey
-                            </footer>
-                        </blockquote>
+                                <svg
+                                    class="w-6 h-6 text-cardDark mb-2"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="currentColor"
+                                    viewBox="0 0 18 14"
+                                >
+                                    <path
+                                        d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z"
+                                    />
+                                </svg>
+                                <p>
+                                    "It's truly inspiring to see the impact
+                                    Booked for Charity is making! I appreciate
+                                    all that you are doing to make a
+                                    difference."
+                                </p>
+                                <footer
+                                    class="mt-2 text-sm font-bold text-cardDark"
+                                >
+                                    — Transcendent Journey
+                                </footer>
+                            </blockquote>
+                        </div>
                     </div>
                 </div>
             </section>
