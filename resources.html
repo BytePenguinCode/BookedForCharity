@@ -37,6 +37,21 @@
         </script>
 
         <style>
+            .tip-card {
+                background-color: white;
+                border: 1px solid rgba(223, 175, 0, 0.2);
+                border-radius: 0.75rem;
+                padding: 1.5rem;
+                text-align: center;
+                transition: transform 0.25s ease, box-shadow 0.25s ease;
+            }
+
+            .tip-card:hover {
+                transform: scale(1.03);
+                box-shadow: 0 12px 20px rgba(0, 0, 0, 0.08);
+                background-color: #fff9ed;
+            }
+
             section.card-section {
                 background-color: white;
                 transition: background-color 0.3s ease, box-shadow 0.3s ease,
@@ -95,7 +110,9 @@
                     class="hidden lg:flex space-x-6 font-semibold text-white tracking-wide"
                 >
                     <li>
-                        <a href="/index.html" class="px-3 py-2 rounded">About Us</a>
+                        <a href="/index.html" class="px-3 py-2 rounded"
+                            >About Us</a
+                        >
                     </li>
                     <li>
                         <a
@@ -112,9 +129,7 @@
                         >
                     </li>
                     <li>
-                        <a
-                            href="#"
-                            class="hover:bg-white/20 px-3 py-2 rounded"
+                        <a href="#" class="hover:bg-white/20 px-3 py-2 rounded"
                             >Resources</a
                         >
                     </li>
@@ -135,7 +150,9 @@
             >
                 <ul class="flex flex-col text-base">
                     <li>
-                        <a href="/index.html" class="block py-2 px-2 rounded">About Us</a>
+                        <a href="/index.html" class="block py-2 px-2 rounded"
+                            >About Us</a
+                        >
                     </li>
                     <li>
                         <a
@@ -178,42 +195,35 @@
             </h1>
         </header>
 
-        <main class="max-w-4xl mx-auto px-6 pb-24 space-y-14">
-            <!-- Reading Tips Section -->
+        <main class="max-w-6xl mx-auto px-4 sm:px-6 pb-24 space-y-14">
+            <!-- Reading Tips -->
             <section
                 class="card-section shadow-lg border border-pagePrimary/40 p-6 sm:p-10 bg-white"
             >
-                <h2
-                    class="text-2xl sm:text-3xl font-cooper text-cardDark mb-8 text-center flex items-center justify-center gap-3"
-                >
-                    <svg
-                        class="w-8 h-8 text-cardDark"
-                        fill="currentColor"
-                        viewBox="0 0 24 24"
-                    >
-                        <path
-                            d="M2 5a2 2 0 012-2h7v16H4a2 2 0 01-2-2V5zm18-2h-7v16h7a2 2 0 002-2V5a2 2 0 00-2-2z"
-                        />
-                    </svg>
-
-                    Reading Tips:
-                    <span class="text-lg font-quicksand text-gray-800 pl-2"
-                        >Help your child build a love for reading</span
-                    >
-                </h2>
-
-                <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                    <!-- Tip 1 -->
-                    <div
-                        class="bg-white border border-cardDark/20 hover:shadow-xl hover:scale-[1.02] transition rounded-xl p-6 text-center"
-                    >
-                        <svg
-                            class="w-10 h-10 mx-auto mb-3 text-cardDark"
-                            fill="currentColor"
-                            viewBox="0 0 24 24"
+                <div class="text-center mb-8">
+                    <!-- Icon + Title -->
+                    <div class="flex items-center justify-center gap-3 mb-2">
+                        <h2
+                            class="text-3xl sm:text-4xl font-cooper text-cardDark font-extrabold"
                         >
-                            <path d="M3 4h18v2H3zM3 10h18v2H3zM3 16h18v2H3z" />
-                        </svg>
+                            💡Reading Tips
+                        </h2>
+                    </div>
+
+                    <!-- Subheading -->
+                    <p
+                        class="text-base sm:text-lg text-gray-700 font-medium max-w-2xl mx-auto"
+                    >
+                        Build a love for reading through simple, joyful habits.
+                    </p>
+                </div>
+
+                <div
+                    class="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
+                >
+                    <!-- Tip Card 1 -->
+                    <div class="tip-card">
+                        <div class="text-4xl mb-2">📖</div>
                         <h4 class="text-lg font-bold text-cardDark mb-1">
                             Read together daily
                         </h4>
@@ -226,44 +236,22 @@
                         </p>
                     </div>
 
-                    <!-- Tip 2 -->
-                    <div
-                        class="bg-white border border-cardDark/20 hover:shadow-xl hover:scale-[1.02] transition rounded-xl p-6 text-center"
-                    >
-                        <svg
-                            class="w-10 h-10 mx-auto mb-3 text-pink-500"
-                            fill="currentColor"
-                            viewBox="0 0 24 24"
-                        >
-                            <path
-                                d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 
-                    4.42 3 7.5 3c1.74 0 3.41 0.81 
-                    4.5 2.09C13.09 3.81 14.76 3 16.5 3 
-                    19.58 3 22 5.42 22 8.5c0 3.78-3.4 
-                    6.86-8.55 11.54L12 21.35z"
-                            />
-                        </svg>
+                    <!-- Tip Card 2 -->
+                    <div class="tip-card">
+                        <div class="text-4xl mb-2">🧒📚</div>
                         <h4 class="text-lg font-bold text-cardDark mb-1">
                             Let them choose
                         </h4>
                         <p class="text-gray-700">
-                            Support their interests — whether it’s
+                            Support their interests — whether it's
                             <strong>fantasy</strong>, <strong>animals</strong>,
                             or <strong>comics</strong>.
                         </p>
                     </div>
 
-                    <!-- Tip 3 -->
-                    <div
-                        class="bg-white border border-cardDark/20 hover:shadow-xl hover:scale-[1.02] transition rounded-xl p-6 text-center"
-                    >
-                        <svg
-                            class="w-10 h-10 mx-auto mb-3 text-yellow-500"
-                            fill="currentColor"
-                            viewBox="0 0 24 24"
-                        >
-                            <path d="M12 3L2 21h20L12 3z" />
-                        </svg>
+                    <!-- Tip Card 3 -->
+                    <div class="tip-card">
+                        <div class="text-4xl mb-2">🛋️</div>
                         <h4 class="text-lg font-bold text-cardDark mb-1">
                             Create a cozy reading spot
                         </h4>
@@ -276,19 +264,9 @@
                         </p>
                     </div>
 
-                    <!-- Tip 4 -->
-                    <div
-                        class="bg-white border border-cardDark/20 hover:shadow-xl hover:scale-[1.02] transition rounded-xl p-6 text-center"
-                    >
-                        <svg
-                            class="w-10 h-10 mx-auto mb-3 text-blue-500"
-                            fill="currentColor"
-                            viewBox="0 0 24 24"
-                        >
-                            <path
-                                d="M12 12c2.21 0 4-1.79 4-4S14.21 4 12 4 8 5.79 8 8s1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
-                            />
-                        </svg>
+                    <!-- Tip Card 4 -->
+                    <div class="tip-card">
+                        <div class="text-4xl mb-2">❓</div>
                         <h4 class="text-lg font-bold text-cardDark mb-1">
                             Ask questions
                         </h4>
@@ -299,19 +277,9 @@
                         </p>
                     </div>
 
-                    <!-- Tip 5 -->
-                    <div
-                        class="bg-white border border-cardDark/20 hover:shadow-xl hover:scale-[1.02] transition rounded-xl p-6 text-center"
-                    >
-                        <svg
-                            class="w-10 h-10 mx-auto mb-3 text-indigo-500"
-                            fill="currentColor"
-                            viewBox="0 0 24 24"
-                        >
-                            <path
-                                d="M19 3H5c-1.1 0-2 .9-2 2v14l4-4h12c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
-                            />
-                        </svg>
+                    <!-- Tip Card 5 -->
+                    <div class="tip-card">
+                        <div class="text-4xl mb-2">👀📘</div>
                         <h4 class="text-lg font-bold text-cardDark mb-1">
                             Be a reading role model
                         </h4>
@@ -320,30 +288,19 @@
                         </p>
                     </div>
 
-                    <!-- Tip 6 -->
-                    <div
-                        class="bg-white border border-cardDark/20 hover:shadow-xl hover:scale-[1.02] transition rounded-xl p-6 text-center"
-                    >
-                        <svg
-                            class="w-10 h-10 mx-auto mb-3 text-orange-500"
-                            fill="currentColor"
-                            viewBox="0 0 24 24"
-                        >
-                            <path d="M3 5h18v2H3zM3 11h18v2H3zM3 17h12v2H3z" />
-                        </svg>
+                    <!-- Tip Card 6 -->
+                    <div class="tip-card">
+                        <div class="text-4xl mb-2">📅</div>
                         <h4 class="text-lg font-bold text-cardDark mb-1">
                             Make Thursdays your book day!
                         </h4>
                         <p class="text-gray-700">
-                            Check out our
-                            <strong class="text-orange-600">TYRC</strong> posts
-                            where we feature a book, share a short summary, and
-                            suggest questions to discuss together. Turn it into
-                            a
+                            Join our
+                            <strong class="text-orange-600">TYRC</strong> and
+                            turn it into a
                             <span class="text-orange-600 font-semibold"
-                                >weekly reading tradition</span
-                            >
-                            with your child!
+                                >weekly tradition</span
+                            >!
                         </p>
                     </div>
                 </div>
@@ -351,85 +308,93 @@
 
             <!-- Activity Guides -->
             <section
-                class="card-section shadow-lg border border-pagePrimary/40 p-6 sm:p-10 relative bg-white text-center"
+                class="card-section shadow-lg border border-pagePrimary/40 p-6 sm:p-10 text-center bg-white"
             >
-                <h2
-                    class="text-2xl sm:text-3xl font-cooper text-cardDark mb-4 flex items-center justify-center gap-3"
-                >
-                    <svg
-                        class="w-6 h-6 text-cardDark animate-spin-slow"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
+                <div class="text-center">
+                    <!-- Icon + Title -->
+                    <div class="flex items-center justify-center gap-3 mb-2">
+                        <h2
+                            class="text-3xl sm:text-4xl font-cooper text-cardDark font-extrabold"
+                        >
+                            📝 Activity Guides
+                        </h2>
+                    </div>
+
+                    <!-- Subheading -->
+                    <p
+                        class="text-base sm:text-lg text-gray-700 font-medium max-w-2xl mx-auto"
                     >
-                        <path
-                            d="M10 2a8 8 0 100 16 8 8 0 000-16zM9 4h2v6H9V4zm0 8h2v2H9v-2z"
-                        />
-                    </svg>
-                    Activity Guides: Coming Soon!
-                </h2>
+                        Coming Soon!
+                    </p>
+                </div>
             </section>
 
             <!-- Recommended Tools -->
             <section
-                class="card-section shadow-lg border border-pagePrimary/40 p-6 sm:p-10 relative bg-white"
+                class="card-section shadow-lg border border-pagePrimary/40 p-6 sm:p-10 bg-white"
             >
-                <h2
-                    class="text-2xl sm:text-3xl font-cooper text-cardDark mb-6 flex items-center gap-2"
-                >
-                    <svg
-                        class="w-6 h-6 text-cardDark animate-pulse"
-                        fill="currentColor"
-                        viewBox="0 0 24 24"
-                    >
-                        <path
-                            d="M12 4a8 8 0 018 8c0 3.9-2.76 7.14-6.5 7.88L12 22l-1.5-2.12C6.76 19.14 4 15.9 4 12a8 8 0 018-8z"
-                        />
-                    </svg>
-                    Recommended Tools:
-                </h2>
+                <div class="text-center mb-8">
+                    <!-- Icon + Title -->
+                    <div class="flex items-center justify-center gap-3 mb-2">
+                        <h2
+                            class="text-3xl sm:text-4xl font-cooper text-cardDark font-extrabold"
+                        >
+                            🧰 Recommended Tools
+                        </h2>
+                    </div>
 
-                <p class="mb-4 text-lg text-gray-800">
-                    Help support your child's reading journey with these helpful
-                    resources:
-                </p>
+                    <!-- Subheading -->
+                    <p
+                        class="text-base sm:text-lg text-gray-700 font-medium max-w-2xl mx-auto"
+                    >
+                        Help support your child's reading journey with these
+                        helpful resources:
+                    </p>
+                </div>
+
                 <ul
-                    class="list-disc list-inside space-y-3 text-[17px] text-gray-900 font-medium marker:text-cardDark"
+                    class="list-disc list-inside space-y-3 text-base sm:text-[17px] text-gray-900 font-medium marker:text-cardDark"
                 >
                     <li>
-                        <strong>Epic!</strong> — A digital library for kids 12
-                        and under with thousands of books, audiobooks, and
-                        educational videos.
+                        <strong>Epic!</strong> — A digital library for kids
+                        under 12.
                     </li>
                     <li>
-                        <strong>Libby</strong> — A free app that lets you borrow
-                        eBooks and audiobooks from your local library.
+                        <strong>Libby</strong> — Borrow eBooks/audiobooks from
+                        your local library.
                     </li>
                     <li>
-                        <strong>Storyline Online</strong> — Well-known actors
-                        read children’s books aloud with engaging visuals.
+                        <strong>Storyline Online</strong> — Celebrities read
+                        aloud with visuals.
                     </li>
                     <li>
-                        <strong>PBS Kids Reading Games</strong> — Fun,
-                        educational games that build reading and vocabulary
-                        skills.
+                        <strong>PBS Kids Games</strong> — Fun and educational
+                        games for literacy.
                     </li>
                     <li>
-                        <strong>Book Creator</strong> — A simple tool for kids
-                        to create their own digital books and stories.
+                        <strong>Book Creator</strong> — Kids can create their
+                        own digital books.
                     </li>
                 </ul>
 
                 <p class="mt-6 text-center text-cardDark font-bold text-base">
-                    And don’t forget to follow our Thursday Young Readers Circle
-                    (TYRC) for weekly book picks and summaries you can read
-                    together!
+                    Don’t forget to check out our TYRC every Thursday for
+                    curated stories and questions!
                 </p>
+                <img
+                    src="/assets/tyrc.jpg"
+                    alt="TYRC Section Banner"
+                    class="w-full max-w-4xl mx-auto rounded-2xl shadow-md border border-pagePrimary/30 my-6"
+                />
             </section>
         </main>
 
-        <!-- Footer -->
-        <footer class="mt-20 text-center py-6 text-sm font-quicksand">
-            <div class="w-1/3 h-px rounded-sm bg-cardDark mx-auto mb-4"></div>
+        <footer
+            class="mt-20 text-center py-6 text-sm font-quicksand text-sm md:text-md"
+        >
+            <div
+                class="w-1/3 md:w-1/5 h-px rounded-sm bg-cardDark mx-auto mb-4"
+            ></div>
             <p class="text-cardDark">
                 &copy; 2025 Booked for Charity. <br />Made courtesy of
                 <a
